@@ -1,0 +1,406 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.nav-links .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.nav-links .dropdown li {
+    margin: 0;
+}
+
+.nav-links .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+.nav-links .dropdown li a:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.hero-section {
+    background:linear-gradient(45deg, #3bff4f,#33beff);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg, #3bff4f,#33beff);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: 100px;
+}
+
+.card {
+    background-color: #ffa500; /* Default orange for the cards */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:nth-child(2) {
+    background-color: #00c5c5; /* Teal for the middle card */
+    color: black;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card button {
+    background-color: #00c5c5; /* Default button color */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:nth-child(2) button {
+    background-color: #ffa500; /* Orange button for the teal card */
+    color: black;
+}
+
+.card button:hover {
+    transform: scale(1.1);
+    background-color: #007bff; /* Change to blue on hover */
+    color: white;
+}
+
+.about-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.about-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.about-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-section p {
+    color: #555;
+}
+
+.about-cta {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about-cta button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-cta button:hover {
+    background-color: #003d80;
+}
+
+/* Error and success messages */
+.error {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Contact Form Styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Account Image Button */
+.account-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.account-btn img {
+    width: 32px; /* Set the width to 16px */
+    height: 32px; /* Set the height to 16px */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.account-btn img:hover {
+    transform: scale(1.2); /* Slightly enlarge the image on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a small shadow effect */
+}
+
+.success {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container-first {
+    background-color: #ff616f; /* Pinkish red background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 1440px; /* Increased width to fill more space */
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.container-first h1 {
+    font-size: 28px; /* Slightly larger font */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.container-first p {
+    font-size: 18px; /* Slightly larger font */
+    margin-bottom: 20px;
+    line-height: 1.8; /* Better line spacing */
+}
+
+.container-first .logo {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.container-first .logo img {
+    width: 60px; /* Adjusted size for better visibility */
+}
+
+
+
